@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'SFProDisplay';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/SFProDisplay-regular.woff2') format('woff2'), url('../fonts/SFProDisplay-regular.woff') format('woff');
+  font-display: swap;
+}
+
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'SFProDisplay', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.section__title {
+  font-family: SF Pro Display;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 57px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+  .section__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 25px;
+  }
+
+  .section__title {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+}

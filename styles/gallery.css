@@ -1,34 +1,21 @@
 .gallery__list {
   display: grid;
-  grid-template-columns:
-    [one-column-start]
-    1fr
-    1fr
-    [one-column-end two-column-start three-column-start]
-    1fr
-    [two-column-end three-column-end];
-  grid-template-rows:
-    [one-row-start two-row-start]
-    1fr
-    [two-row-end three-row-start]
-    1fr
-    [one-row-end three-row-end];
+  grid-template-areas:
+    'one one two'
+    'one one three';
   gap: 30px 35px;
 }
 
 .gallery__item_1 {
-  grid-column: one-column-start / one-column-end;
-  grid-row: one-row-start / one-row-end;
+  grid-area: one;
 }
 
 .gallery__item_2 {
-  grid-column: two-column-start / two-column-end;
-  grid-row: two-row-start / two-row-end;
+  grid-area: two;
 }
 
 .gallery__item_3 {
-  grid-column: three-column-start / three-column-end;
-  grid-row: three-row-start / three-row-end;
+  grid-area: three;
 }
 
 .gallery__img {
@@ -40,48 +27,28 @@
 
 @media (max-width: 1024px) {
   .gallery__list {
-    grid-template-columns:
-      [two-column-start three-column-start]
-      1fr
-      [one-column-start two-column-end three-column-end]
-      1fr
-      1fr
-      [one-column-end];
+    grid-template-areas:
+      'two one one'
+      'three one one';
     gap: 15px;
   }
 }
 
 @media (max-width: 768px) {
   .gallery__list {
-    grid-template-columns:
-      [two-column-start one-column-start]
-      1fr
-      [two-column-end three-column-start]
-      1fr
-      [three-column-end one-column-end];
-    grid-template-rows:
-      [two-row-start three-row-start]
-      1fr
-      [one-row-start two-row-end three-row-end]
-      2fr
-      [one-row-end];
+    grid-template-areas:
+      'two three'
+      'one one'
+      'one one';
   }
 }
 
 @media (max-width: 480px) {
   .gallery__list {
-    grid-template-columns:
-      [one-column-start two-column-start three-column-start]
-      1fr
-      [one-column-end two-column-end three-column-end];
-    grid-template-rows:
-      [one-row-start]
-      1fr
-      [one-row-end two-row-start]
-      1fr
-      [two-row-end three-row-start]
-      1fr
-      [three-row-end];
+    grid-template-areas:
+      'one'
+      'two'
+      'three';
     gap: 10px;
   }
 }
